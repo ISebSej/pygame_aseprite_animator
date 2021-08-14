@@ -5,7 +5,7 @@ Pygame_Aseprite_Animation
 It's finally possible to parse and display .ase and .aseprite files directly without exporting them into some other kind of format first! Thanks to @Eiyeron for his work on the [py_aseprite](https://github.com/Eiyeron/py_aseprite) on which this was build.
 
 
-![Animation Preview](http://i.imgur.com/n8EUvEa.gif)
+![Animation Preview](http://i.imgur.com/n8EUvEa.mp4)
 
 Check out the full example in example/example.py
 
