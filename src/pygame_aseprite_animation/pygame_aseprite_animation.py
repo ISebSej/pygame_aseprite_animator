@@ -4,7 +4,7 @@ from py_aseprite import CelChunk
 from enum import Enum
 from pathlib import Path
 import pygame
-import os, time
+import time
 
 class Animation(object):
     """A class that contains all of the animations and frame duration information
@@ -33,7 +33,7 @@ class Animation(object):
         
         :filedir: Path to your .ase or .aseprite files\n 
         :return: Animation object containt your frames as a list of pygame.surface() objects """
-        with open(self.tileanimationdir + filedir, 'rb') as f:
+        with open(filedir, 'rb') as f:
             return AsepriteFile(f.read())
 
     def draw_all_animation_frames(self):

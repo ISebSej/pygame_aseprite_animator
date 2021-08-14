@@ -1,5 +1,6 @@
 #MACOS stuff
 .DS_STORE
+*.ign
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

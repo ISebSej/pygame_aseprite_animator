@@ -4,13 +4,15 @@ from pygame_aseprite_animation import *
 pygame.init()
 
 # Set up the drawing window
-screen = pygame.display.set_mode([500, 500])
+screen = pygame.display.set_mode([300, 300])
 
 # Set file directory
 dirname = os.path.dirname(__file__)
 aseprite_file_directory = str(dirname) + '/test.ase'
 
+# Initialize animations
 test_animation = Animation(aseprite_file_directory)
+animationmanager = AnimationManager([test_animation], screen)
 
 
 running = True
@@ -21,10 +23,9 @@ while running:
             running = False
 
     # Fill the background with white
-    screen.fill((255, 255, 255))
+    screen.fill((0, 0, 0))
 
-    # Draw a solid blue circle in the center
-    pygame.draw.circle(screen, (0, 0, 255), (250, 250), 75)
+    animationmanager.update_self(0, 0)
 
     # Flip the display
     pygame.display.flip()
